@@ -6,7 +6,7 @@ interface Props {
   className?: string;
 }
 
-export default function ButtonsContainer({ children, className }: Props) {
+export default function HeroButtonsContainer({ children, className }: Props) {
   return (
     <div className={cn("flex items-center gap-5", className)}>{children}</div>
   );

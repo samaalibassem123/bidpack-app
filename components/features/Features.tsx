@@ -1,16 +1,14 @@
 import { cn } from "@/utils/utils";
 import React from "react";
-
 interface Props {
   children: React.ReactNode;
   className?: string;
 }
-
-export default function Header({ children, className }: Props) {
+export default function Features({ children, className }: Props) {
   return (
     <div
       className={cn(
-        " sticky top-10 px-[80px] py-[10px] text-white z-50   flex items-center justify-between backdrop-blur-[8px] border-y border-y-white/20 bg-white/10 rounded-[50px]",
+        "flex  text-center pt-25 flex-col gap-3 items-center justify-center min-h-svh  ",
         className
       )}
     >

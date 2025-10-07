@@ -6,11 +6,11 @@ interface Props {
   className?: string;
 }
 
-export default function Header({ children, className }: Props) {
+export default function Hero({ children, className }: Props) {
   return (
     <div
       className={cn(
-        " sticky top-10 px-[80px] py-[10px] text-white z-50   flex items-center justify-between backdrop-blur-[8px] border-y border-y-white/20 bg-white/10 rounded-[50px]",
+        "flex items-center justify-center flex-col gap-10 w-full h-[80svh] text-white",
         className
       )}
     >

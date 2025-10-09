@@ -8,7 +8,7 @@ export default function Functionalities({ children, className }: Props) {
   return (
     <div
       className={cn(
-        "h-svh text-center justify-center  flex flex-col  gap-3",
+        "min-h-svh text-center justify-center p-5 pt-40  flex flex-col  gap-3",
         className
       )}
     >

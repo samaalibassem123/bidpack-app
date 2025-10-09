@@ -10,7 +10,7 @@ export default function FeatureCards({ children, className }: Props) {
   return (
     <div
       className={cn(
-        " mt-10 flex sm:flex-row    flex-col gap-[39px] w-full sm:items-start items-center justify-center",
+        " mt-10 flex lg:flex-row  flex-col gap-[39px] w-full lg:items-start items-center justify-center",
         className
       )}
     >

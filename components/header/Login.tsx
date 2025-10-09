@@ -4,7 +4,7 @@ import React from "react";
 export default function Login() {
   return (
     <Link
-      href={"/login"}
+      href={"/register"}
       className=" hover:opacity-80 transition-all font-semibold"
     >
       Login

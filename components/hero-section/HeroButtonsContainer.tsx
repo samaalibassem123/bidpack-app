@@ -8,6 +8,10 @@ interface Props {
 
 export default function HeroButtonsContainer({ children, className }: Props) {
   return (
-    <div className={cn("flex items-center gap-5", className)}>{children}</div>
+    <div
+      className={cn("flex sm:flex-row flex-col items-center  gap-5", className)}
+    >
+      {children}
+    </div>
   );
 }

@@ -10,7 +10,7 @@ export default function Hero({ children, className }: Props) {
   return (
     <div
       className={cn(
-        "flex items-center justify-center flex-col gap-10 w-full h-[80svh] text-white",
+        "flex items-center sm:justify-center justify-evenly flex-col gap-10   w-full h-[90lvh] text-white",
         className
       )}
     >

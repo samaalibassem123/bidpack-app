@@ -1,6 +1,6 @@
 import { cn } from "@/utils/utils";
 import React from "react";
-import SlideUpAnimation from "../animation/SlideUpAnimation";
+import SlideUpAnimation from "../../../animation/SlideUpAnimation";
 
 interface Props {
   children: React.ReactNode;

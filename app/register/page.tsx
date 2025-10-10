@@ -1,6 +1,6 @@
 "use client";
 
-import NotifyMeForm from "@/components/notify-me-form/NotifyMeForm";
+import NotifyMeForm from "@/components/pages/register/notify-me-form/NotifyMeForm";
 import Logo from "@/components/ui/Logo";
 import NotifyMeBackground from "@/components/ui/NotifyMeBackground";
 import Title from "@/components/ui/Title";

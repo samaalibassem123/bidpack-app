@@ -1,8 +1,8 @@
 import React from "react";
-import Title from "../ui/Title";
-import DescriptionText from "../ui/DescriptionText";
+import Title from "../../../ui/Title";
+import DescriptionText from "../../../ui/DescriptionText";
 import Link from "next/link";
-import SlideUpAnimation from "../animation/SlideUpAnimation";
+import SlideUpAnimation from "../../../animation/SlideUpAnimation";
 
 export default function CtaSection() {
   return (

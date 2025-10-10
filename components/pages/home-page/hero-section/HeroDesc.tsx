@@ -1,6 +1,6 @@
 import React from "react";
 
-import DescriptionText from "../ui/DescriptionText";
+import DescriptionText from "../../../ui/DescriptionText";
 
 export default function HeroDesc() {
   return (

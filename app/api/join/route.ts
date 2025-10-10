@@ -1,33 +1,29 @@
 "use server";
 
-import { google } from "googleapis";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   const { email } = await req.json();
-  console.log("Using client email:", process.env.GOOGLE_CLIENT_EMAIL);
-  console.log("Private key loaded:", !!process.env.GOOGLE_PRIVATE_KEY);
-  console.log("Private key loaded:", !!process.env.GOOGLE_SHEET_ID);
 
   try {
-    const auth = new google.auth.JWT({
-      email: process.env.GOOGLE_CLIENT_EMAIL,
-      key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
-      scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-    });
+    const res = await fetch(
+      "https://script.google.com/macros/s/AKfycbyNMD3jPT9JMIMzZvYHB_NMBPpZaQK50DzfDUxJuF81gUxJoXby8c2hurxM74385zS-pw/exec",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+        }),
+      }
+    );
 
-    const sheets = google.sheets({ version: "v4", auth });
+    const text = await res.text();
+    const result = JSON.parse(text);
+    console.log(result);
 
-    await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: "Sheet1!A:A",
-      valueInputOption: "RAW",
-      requestBody: {
-        values: [[email, new Date().toLocaleString()]],
-      },
-    });
-
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: res });
   } catch (error) {
     console.error(error);
     return NextResponse.json({ success: false, error });

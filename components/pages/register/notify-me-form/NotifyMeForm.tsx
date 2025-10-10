@@ -7,7 +7,28 @@ export default function NotifyMeForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("Sending...");
+    const data = {
+      email,
+    };
+    try {
+      const res = await fetch("/api/join", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      const result = await res.json();
+      console.log(result);
+
+      if (result.status === "success") {
+        alert("Email added successfully!");
+      } else {
+        alert("Failed: " + result.message);
+      }
+    } catch (err) {
+      console.error(err);
+      alert("An error occurred");
+    }
   };
   return (
     <form

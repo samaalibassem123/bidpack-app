@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../ui/Logo";
+import Logo from "../../../ui/Logo";
 import Link from "next/link";
 
 export default function Footer() {

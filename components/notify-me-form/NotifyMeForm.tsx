@@ -8,25 +8,6 @@ export default function NotifyMeForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("Sending...");
-    try {
-      const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbxmeqTN3bqBreizj6BYNshzIeT3Wj1IshfRRg-fDIkfFT2Jgk2KI38OYkOz_5Dj2fZKkA/exec",
-        {
-          method: "POST",
-          body: JSON.stringify({
-            email,
-            secret:
-              "AKfycbz1OWmXpLBx4trqKTTzEiNXhucA0S7Lifcvrc8hofwQBBViqQ9ku4V4FeOUUkof71h2jA",
-          }),
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      console.log(res);
-      setStatus("✅ Email added successfully!");
-      setEmail("");
-    } catch (err) {
-      setStatus("❌ Something went wrong!");
-    }
   };
   return (
     <form

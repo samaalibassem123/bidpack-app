@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScrollWrapper from "@/components/animation/SmoothScrollWrapper";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,6 +51,7 @@ export default function RootLayout({
       >
         <SmoothScrollWrapper />
         {children}
+        <Analytics />
       </body>
     </html>
   );

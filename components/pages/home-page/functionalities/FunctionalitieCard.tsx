@@ -12,7 +12,7 @@ export default function FunctionalitieCard({ children, className }: Props) {
     <SlideUpScrollAnimation delay={0.5}>
       <div
         className={cn(
-          "relative cursor-pointer drop hover:scale-101 group scale-100 hover:shadow-gray-400/10 shadow-lg transition-all duration-200 flex flex-col justify-end gap-3 bg-[#FFFFFF1A] sm:w-[280px] text-start   pl-[20px] pb-[20px] h-[190px] rounded-[10px] border border-white/20",
+          "relative cursor-pointer drop hover:scale-101 hover:opacity-95 group scale-100 hover:shadow-gray-400/10 shadow-lg transition-all duration-200 flex flex-col justify-end gap-3 bg-[#FFFFFF1A] sm:w-[280px] text-start   pl-[20px] pb-[20px] h-[190px] rounded-[10px] border border-white/20",
           className
         )}
       >

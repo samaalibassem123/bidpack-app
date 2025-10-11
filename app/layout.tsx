@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "BidPack — VFX Outsourcing & Project Management",
   description:
-    "BidPack is the all-in-one marketplace for VFX production — connect with vetted vendors, automate bids and contracts, and manage assets and timelines with full visibility.",
+    "BidPack connects VFX studios with trusted vendors to streamline outsourcing: manage bids, contracts, asset delivery and project workflows securely and transparently.",
   keywords: [
     "BidPack",
     "VFX outsourcing platform",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     url: "https://bidpack-app.vercel.app/",
     siteName: "BidPack",
     description:
-      "BidPack is the all-in-one marketplace for VFX production — connect with vetted vendors, automate bids and contracts, and manage assets and timelines with full visibility.",
+      "BidPack connects VFX studios with trusted vendors to streamline outsourcing: manage bids, contracts, asset delivery and project workflows securely and transparently.",
     images: [
       {
         url: "/og-image.png",

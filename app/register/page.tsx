@@ -5,6 +5,7 @@ import Logo from "@/components/ui/Logo";
 import NotifyMeBackground from "@/components/ui/NotifyMeBackground";
 import Title from "@/components/ui/Title";
 import { motion } from "framer-motion";
+import { ToastContainer } from "react-toastify";
 
 const showAnimation = {
   initial: { opacity: 0, y: 10 },
@@ -43,6 +44,18 @@ export default function page() {
         </span>
       </motion.div>
       <NotifyMeForm />
+      <ToastContainer
+        className={"bg-[#17181D]"}
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

@@ -4,7 +4,6 @@ import "./globals.css";
 import SmoothScrollWrapper from "@/components/animation/SmoothScrollWrapper";
 
 import { Analytics } from "@vercel/analytics/next";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

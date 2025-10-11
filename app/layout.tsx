@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScrollWrapper from "@/components/animation/SmoothScrollWrapper";
 
 import { Analytics } from "@vercel/analytics/next";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +20,15 @@ export const metadata: Metadata = {
   title: "BidPack — VFX Outsourcing & Project Management",
   description:
     "BidPack connects VFX studios with trusted vendors to streamline outsourcing: manage bids, contracts, asset delivery and project workflows securely and transparently.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
   keywords: [
     "BidPack",
     "VFX outsourcing platform",
@@ -31,10 +41,6 @@ export const metadata: Metadata = {
     "secure asset delivery",
     "vendor management platform",
   ],
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-icon.svg",
-  },
   openGraph: {
     type: "website",
     title: " — VFX Outsourcing & Project Management",
@@ -42,12 +48,6 @@ export const metadata: Metadata = {
     siteName: "BidPack",
     description:
       "BidPack connects VFX studios with trusted vendors to streamline outsourcing: manage bids, contracts, asset delivery and project workflows securely and transparently.",
-    images: [
-      {
-        url: "/og-image.png",
-        alt: "BidPack — VFX outsourcing platform",
-      },
-    ],
   },
 };
 
@@ -58,9 +58,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
         <meta name="apple-mobile-web-app-title" content="BidPack" />
-      </head>
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

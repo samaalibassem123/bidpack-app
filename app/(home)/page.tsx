@@ -16,7 +16,7 @@ import FunctionalitiesSection from "@/components/pages/home-page/sections/Functi
 export default function Home() {
   return (
     <>
-      <div className=" relative min-h-lvh sm:px-[70px] px-4 pt-[43px]">
+      <main className=" relative min-h-lvh sm:px-[70px] px-4 pt-[43px]">
         <Background />
         <Header>
           <Logo />
@@ -29,7 +29,7 @@ export default function Home() {
         <FeaturesSection />
         <FunctionalitiesSection />
         <CtaSection />
-      </div>
+      </main>
       <Footer />
     </>
   );

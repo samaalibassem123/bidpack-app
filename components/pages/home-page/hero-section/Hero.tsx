@@ -8,13 +8,13 @@ interface Props {
 
 export default function Hero({ children, className }: Props) {
   return (
-    <div
+    <section
       className={cn(
         "flex items-center sm:justify-center justify-evenly flex-col gap-10   w-full h-[90lvh] text-white",
         className
       )}
     >
       {children}
-    </div>
+    </section>
   );
 }

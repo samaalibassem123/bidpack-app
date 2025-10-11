@@ -13,7 +13,7 @@ const showAnimation = {
 
 export default function page() {
   return (
-    <div className="relative w-full h-lvh flex flex-col gap-4 items-center justify-center text-white p-5">
+    <main className="relative w-full h-lvh flex flex-col gap-4 items-center justify-center text-white p-5">
       <NotifyMeBackground />
       <motion.div
         variants={showAnimation}
@@ -43,6 +43,6 @@ export default function page() {
         </span>
       </motion.div>
       <NotifyMeForm />
-    </div>
+    </main>
   );
 }

@@ -1,7 +1,6 @@
 import { cn } from "@/utils/utils";
 import Link from "next/link";
 import React from "react";
-import SlideUpAnimation from "../../../animation/SlideUpAnimation";
 
 export default function GetStarted() {
   return (

@@ -8,6 +8,6 @@ interface Props {
 
 export default function ButtonsContainer({ children, className }: Props) {
   return (
-    <div className={cn("flex items-center gap-5", className)}>{children}</div>
+    <nav className={cn("flex items-center gap-5", className)}>{children}</nav>
   );
 }

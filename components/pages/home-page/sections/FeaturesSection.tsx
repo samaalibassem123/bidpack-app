@@ -2,7 +2,7 @@ import React from "react";
 import Feature from "@/components/pages/home-page/features/Feature";
 import FeatureCards from "@/components/pages/home-page/features/FeatureCards";
 import Features from "@/components/pages/home-page/features/Features";
-import SlideUpAnimation from "@/components/animation/SlideUpAnimation";
+import SlideUpScrollAnimation from "@/components/animation/SlideUpScrollAnimation";
 import Title from "@/components/ui/Title";
 import DescriptionText from "@/components/ui/DescriptionText";
 import { Briefcase, FileStack, Lock, Search } from "lucide-react";
@@ -11,22 +11,22 @@ import Image from "next/image";
 export default function FeaturesSection() {
   return (
     <Features>
-      <SlideUpAnimation>
+      <SlideUpScrollAnimation>
         <Title className="text-xl">Why Choose Us?</Title>
-      </SlideUpAnimation>
-      <SlideUpAnimation>
+      </SlideUpScrollAnimation>
+      <SlideUpScrollAnimation>
         <Title className="text-3xl">Streamline Your Production Pipeline</Title>
-      </SlideUpAnimation>
-      <SlideUpAnimation>
+      </SlideUpScrollAnimation>
+      <SlideUpScrollAnimation>
         <DescriptionText className="text-center">
           BidPack bridges the gap between production houses and creative
           vendors. Our platform is designed to simplify <br /> discovery,
           enhance collaboration, and manage your entire workflow from a single,
           unified dashboard.
         </DescriptionText>
-      </SlideUpAnimation>
+      </SlideUpScrollAnimation>
 
-      <SlideUpAnimation>
+      <SlideUpScrollAnimation>
         <FeatureCards>
           <FeatureCards.LeftSide>
             <Feature>
@@ -86,7 +86,7 @@ export default function FeaturesSection() {
             </Feature>
           </FeatureCards.RightSide>
         </FeatureCards>
-      </SlideUpAnimation>
+      </SlideUpScrollAnimation>
     </Features>
   );
 }

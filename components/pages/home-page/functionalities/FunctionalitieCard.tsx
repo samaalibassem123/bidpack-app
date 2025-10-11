@@ -1,6 +1,6 @@
 import { cn } from "@/utils/utils";
 import React from "react";
-import SlideUpAnimation from "../../../animation/SlideUpAnimation";
+import SlideUpScrollAnimation from "../../../animation/SlideUpScrollAnimation";
 
 interface Props {
   children: React.ReactNode;
@@ -9,7 +9,7 @@ interface Props {
 
 export default function FunctionalitieCard({ children, className }: Props) {
   return (
-    <SlideUpAnimation delay={0.5}>
+    <SlideUpScrollAnimation delay={0.5}>
       <div
         className={cn(
           "relative cursor-pointer drop hover:scale-101 group scale-100 hover:shadow-gray-400/10 shadow-lg transition-all duration-200 flex flex-col justify-end gap-3 bg-[#FFFFFF1A] sm:w-[280px] text-start   pl-[20px] pb-[20px] h-[190px] rounded-[10px] border border-white/20",
@@ -18,7 +18,7 @@ export default function FunctionalitieCard({ children, className }: Props) {
       >
         {children}
       </div>
-    </SlideUpAnimation>
+    </SlideUpScrollAnimation>
   );
 }
 

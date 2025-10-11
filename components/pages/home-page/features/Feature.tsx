@@ -1,6 +1,6 @@
 import { cn } from "@/utils/utils";
 import React from "react";
-import SlideUpAnimation from "../../../animation/SlideUpAnimation";
+import SlideUpScrollAnimation from "../../../animation/SlideUpScrollAnimation";
 
 interface Props {
   children: React.ReactNode;
@@ -9,7 +9,7 @@ interface Props {
 
 export default function Feature({ children, className }: Props) {
   return (
-    <SlideUpAnimation>
+    <SlideUpScrollAnimation>
       <div
         className={cn(
           "flex flex-col gap-1 text-center  items-center",
@@ -18,13 +18,13 @@ export default function Feature({ children, className }: Props) {
       >
         {children}
       </div>
-    </SlideUpAnimation>
+    </SlideUpScrollAnimation>
   );
 }
 
 const FeatureIcon = ({ children, className }: Props) => {
   return (
-    <SlideUpAnimation>
+    <SlideUpScrollAnimation>
       <div
         className={cn(
           " flex items-center mb-4 justify-center p-[10px]  w-[50px] h-[50px] bg-[#5473C133] text-[#5473C1] rounded-[50px]",
@@ -33,7 +33,7 @@ const FeatureIcon = ({ children, className }: Props) => {
       >
         {children}
       </div>
-    </SlideUpAnimation>
+    </SlideUpScrollAnimation>
   );
 };
 

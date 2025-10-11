@@ -8,8 +8,8 @@ interface Props {
 
 export default function Title({ children, className }: Props) {
   return (
-    <p className={cn(" text-7xl text-white font-semibold", className)}>
+    <h1 className={cn(" text-7xl text-white font-semibold", className)}>
       {children}
-    </p>
+    </h1>
   );
 }

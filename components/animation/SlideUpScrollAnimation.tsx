@@ -12,7 +12,7 @@ interface Props {
   y?: number;
 }
 
-export default function SlideUpAnimation({
+export default function SlideUpScrollAnimation({
   children,
   className,
   delay,

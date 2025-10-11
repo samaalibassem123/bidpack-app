@@ -5,7 +5,5 @@ interface Props {
   className?: string;
 }
 export default function DescriptionText({ children, className }: Props) {
-  return (
-    <div className={cn("text-md text-[#B2B2B2]", className)}>{children}</div>
-  );
+  return <p className={cn("text-md text-[#B2B2B2]", className)}>{children}</p>;
 }

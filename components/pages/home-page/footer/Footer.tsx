@@ -4,13 +4,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className=" text-white  flex flex-col gap-10 items-center justify-center py-[66px] bg-[#232a3f] ">
+    <footer className=" text-white  flex flex-col gap-10 items-center justify-center py-[66px] bg-[#232a3f] ">
       <Logo />
-      <div className="flex gap-14">
+      <nav className="flex gap-14">
         <Link href={"#"}>Why Us</Link>
         <Link href={"#"}>Features</Link>
         <Link href={"#"}>Contacts</Link>
-      </div>
-    </div>
+      </nav>
+    </footer>
   );
 }

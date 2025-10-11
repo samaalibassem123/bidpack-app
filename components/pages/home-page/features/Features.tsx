@@ -6,7 +6,7 @@ interface Props {
 }
 export default function Features({ children, className }: Props) {
   return (
-    <div
+    <section
       id="learn-more"
       className={cn(
         "flex  text-center p-10   flex-col gap-3 items-center  justify-center min-h-lvh  ",
@@ -14,6 +14,6 @@ export default function Features({ children, className }: Props) {
       )}
     >
       {children}
-    </div>
+    </section>
   );
 }

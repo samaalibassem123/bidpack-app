@@ -9,7 +9,7 @@ export default function Features({ children, className }: Props) {
     <div
       id="learn-more"
       className={cn(
-        "flex  text-center  flex-col gap-3 items-center  justify-center min-h-lvh  ",
+        "flex  text-center p-10   flex-col gap-3 items-center  justify-center min-h-lvh  ",
         className
       )}
     >

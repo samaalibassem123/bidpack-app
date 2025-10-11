@@ -22,6 +22,16 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-icon.svg",
   },
+  openGraph: {
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Bidpack preview",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

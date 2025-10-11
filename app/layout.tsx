@@ -74,6 +74,10 @@ export default function RootLayout({
         />
         <meta name="apple-mobile-web-app-title" content="BidPack" />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta
+          name="google-site-verification"
+          content="dnZt_u65YSiWSBWwEuxjZwH--V9mPnOHUs5QYcBuxQc"
+        />
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

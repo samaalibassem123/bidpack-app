@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScrollWrapper from "@/components/animation/SmoothScrollWrapper";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <link rel="icon" href="/LOGO.svg" sizes="any" />
         <link
           rel="icon"
@@ -43,7 +44,7 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
-      </head>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

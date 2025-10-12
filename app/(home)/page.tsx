@@ -19,7 +19,7 @@ export default function Home() {
       <main className=" relative min-h-lvh sm:px-[70px] px-4 pt-[43px]">
         <Background />
         <Header>
-          <Logo />
+          <Logo id="header-logo" className="header-logo" />
           <ButtonsContainer>
             <Login />
             <Register />

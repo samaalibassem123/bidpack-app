@@ -3,24 +3,14 @@ import React from "react";
 
 interface Props {
   className?: string;
+  id: string;
 }
 
-const pathAnimation = {
-  hidden: {
-    pathLength: 0,
-  },
-  visible: {
-    pathLength: 1,
-    transition: {
-      duration: 2,
-    },
-  },
-};
-
-export default function Logo({ className }: Props) {
+export default function Logo({ className, id }: Props) {
   return (
     <svg
-      className={cn(className)}
+      id={id}
+      className={cn(" z-50", className)}
       width="134"
       height="44"
       viewBox="0 0 134 44"
@@ -28,7 +18,12 @@ export default function Logo({ className }: Props) {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <rect width="134" height="43.0714" fill="url(#pattern0_6620_7204)" />
+      <rect
+        id={id}
+        width="134"
+        height="43.0714"
+        fill="url(#pattern0_6620_7204)"
+      />
       <defs>
         <pattern
           id="pattern0_6620_7204"

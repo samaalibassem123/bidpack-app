@@ -21,7 +21,7 @@ export default function page() {
         animate="animate"
         transition={{ delay: 0.1, duration: 1, ease: "easeOut" }}
       >
-        <Logo className="size-60  h-fit " />
+        <Logo className="size-60  h-fit " id="notify-me-icon" />
       </motion.div>
       <motion.div
         variants={showAnimation}

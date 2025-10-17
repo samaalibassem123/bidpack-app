@@ -48,7 +48,7 @@ export const AnimatedTestimonials = ({
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2, delay: 0.4 }}
-        className="relative grid grid-cols-1 gap-20 md:grid-cols-2"
+        className="relative grid grid-cols-1 sm:gap-20 md:grid-cols-2"
       >
         <div>
           <div className="relative h-100 w-full">
@@ -90,7 +90,7 @@ export const AnimatedTestimonials = ({
                     width={500}
                     height={500}
                     draggable={false}
-                    className="h-fit w-full rounded-3xl object-cover object-center"
+                    className="h-fit sm:w-full rounded-3xl object-cover object-center"
                   />
                 </motion.div>
               ))}

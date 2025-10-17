@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import { MotionValue, useScroll } from "motion/react";
+import React from "react";
+import { MotionValue } from "motion/react";
 import { cn } from "@/lib/utils";
 import {
   IconBrightnessDown,
@@ -35,25 +35,8 @@ export const MacbookImage = ({
   title?: string | React.ReactNode;
   badge?: React.ReactNode;
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (window && window.innerWidth < 768) {
-      setIsMobile(true);
-    }
-  }, []);
-
   return (
-    <div
-      ref={ref}
-      className="flex  h-fit shrink-0 scale-[0.35] transform  flex-col items-center py-0 [perspective:800px] sm:scale-50 md:scale-80 "
-    >
+    <div className="flex  h-fit w-fit shrink-0 scale-[0.5]  transform  flex-col items-center  [perspective:800px] sm:scale-50 md:scale-80 ">
       {/* Lid */}
       <Lid src={src} />
       {/* Base area */}

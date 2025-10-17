@@ -13,6 +13,8 @@ import Background from "@/components/ui/Background";
 import Logo from "@/components/ui/Logo";
 import FunctionalitiesSection from "@/components/pages/home-page/sections/FunctionalitiesSection";
 
+import { ScrollImages } from "@/components/ui/ScrollImages";
+
 export default function Home() {
   return (
     <>
@@ -26,6 +28,8 @@ export default function Home() {
           </ButtonsContainer>
         </Header>
         <HeroSection />
+        <ScrollImages />
+
         <FeaturesSection />
         <FunctionalitiesSection />
         <CtaSection />

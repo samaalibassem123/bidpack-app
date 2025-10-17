@@ -7,6 +7,7 @@ import Title from "@/components/ui/Title";
 import DescriptionText from "@/components/ui/DescriptionText";
 import { Briefcase, FileStack, Lock, Search } from "lucide-react";
 import Image from "next/image";
+import { MacbookImage } from "@/components/ui/macbook-image";
 
 export default function FeaturesSection() {
   return (
@@ -53,14 +54,7 @@ export default function FeaturesSection() {
             </Feature>
           </FeatureCards.LeftSide>
 
-          <Image
-            src={"/Rectangle 1.svg"}
-            width={300}
-            height={500}
-            alt="feature image"
-            className="  bg-gray-300 h-full  "
-          />
-
+          <MacbookImage />
           <FeatureCards.RightSide>
             <Feature>
               <Feature.Icon>

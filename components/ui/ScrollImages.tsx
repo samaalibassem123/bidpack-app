@@ -44,7 +44,7 @@ View all your existing connections, send new invitations, and explore studios or
 
 export function ScrollImages() {
   return (
-    <div className="h-[100lvh] flex items-center w-full overflow-hidden">
+    <div className="h-[100lvh] flex items-center w-full  ">
       <AnimatedTestimonials testimonials={images} />
     </div>
   );

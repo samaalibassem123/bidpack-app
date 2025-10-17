@@ -54,7 +54,6 @@ export default function FeaturesSection() {
             </Feature>
           </FeatureCards.LeftSide>
 
-          <MacbookImage />
           <FeatureCards.RightSide>
             <Feature>
               <Feature.Icon>

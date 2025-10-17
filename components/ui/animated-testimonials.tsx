@@ -43,15 +43,15 @@ export const AnimatedTestimonials = ({
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-full md:px-8 lg:px-12">
+    <div className="overflow-hidden mx-auto  px-4 py-20 font-sans antialiased md:max-w-full md:px-8 lg:px-12">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2, delay: 0.4 }}
-        className="relative grid grid-cols-1 sm:gap-20 md:grid-cols-2"
+        className="relative grid grid-cols-1 w-full overflow-hidden sm:gap-20 md:grid-cols-2"
       >
         <div>
-          <div className="relative h-100 w-full">
+          <div className="relative h-100 w-full overflow-hidden">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div

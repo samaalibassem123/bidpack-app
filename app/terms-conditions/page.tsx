@@ -1,3 +1,4 @@
+import SlideUpScrollAnimation from "@/components/animation/SlideUpScrollAnimation";
 import Header from "@/components/pages/home-page/header/Header";
 import Copyright from "@/components/ui/Copyright";
 import Logo from "@/components/ui/Logo";
@@ -70,7 +71,9 @@ export default function page() {
       </Header>
 
       {Cards.map((card, index) => (
-        <TermsCard cardata={card} key={index} />
+        <SlideUpScrollAnimation key={index} className="w-full">
+          <TermsCard cardata={card} />
+        </SlideUpScrollAnimation>
       ))}
       <Copyright />
     </div>

@@ -1,3 +1,4 @@
+import SlideUpScrollAnimation from "@/components/animation/SlideUpScrollAnimation";
 import Header from "@/components/pages/home-page/header/Header";
 import Copyright from "@/components/ui/Copyright";
 import Logo from "@/components/ui/Logo";
@@ -103,7 +104,9 @@ export default function page() {
         applications (the “Services”).
       </p>
       {privacyPolicyData.map((card, index) => (
-        <TermsCard cardata={card} key={index} />
+        <SlideUpScrollAnimation className="w-full" key={index}>
+          <TermsCard cardata={card} />
+        </SlideUpScrollAnimation>
       ))}
       <Copyright />
     </div>

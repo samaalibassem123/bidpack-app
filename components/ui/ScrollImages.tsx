@@ -80,7 +80,7 @@ export function ScrollImages() {
               />
               <div className=" space-y-4">
                 <div>
-                  <h1 className="text-xl font-semibold">{img.title}</h1>
+                  <h1 className="text-4xl font-semibold">{img.title}</h1>
                   <span className="text-sm text-gray-500 capitalize">
                     {img.desc}
                   </span>

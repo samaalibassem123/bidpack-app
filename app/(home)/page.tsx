@@ -16,6 +16,7 @@ import FunctionalitiesSection from "@/components/pages/home-page/sections/Functi
 import { ScrollImages } from "@/components/ui/ScrollImages";
 import Link from "next/link";
 import MobileNavBar from "@/components/pages/home-page/header/MobileNavBar";
+import SlideUpScrollAnimation from "@/components/animation/SlideUpScrollAnimation";
 
 export default function Home() {
   return (
@@ -36,7 +37,9 @@ export default function Home() {
           <MobileNavBar />
         </Header>
         <HeroSection />
-        <ScrollImages />
+        <SlideUpScrollAnimation>
+          <ScrollImages />
+        </SlideUpScrollAnimation>
         <FeaturesSection />
         <FunctionalitiesSection />
         <CtaSection />

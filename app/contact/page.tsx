@@ -16,6 +16,7 @@ export default function page() {
           Contact
         </Title>
       </Header>
+
       <div className=" text-center font-[300] tracking-wide flex items-center justify-center flex-col gap-3">
         <p>
           If you have questions, concerns, or requests regarding this Privacy

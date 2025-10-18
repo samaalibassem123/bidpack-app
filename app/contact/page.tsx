@@ -22,13 +22,9 @@ export default function page() {
           Policy, please contact us at:{" "}
         </p>
 
-        <a
-          href={"support@bidpack.co"}
-          target="_blank"
-          className=" border-b border-white font-normal w-fit"
-        >
+        <span className=" select-all selection:text-black selection:bg-white border-b border-white font-normal w-fit">
           support@bidpack.co
-        </a>
+        </span>
         <p>
           Vision Age Company FZ LLC Fujairah Creative City, United Arab Emirates
         </p>

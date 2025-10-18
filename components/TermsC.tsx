@@ -1,11 +1,15 @@
-import SlideUpScrollAnimation from "@/components/animation/SlideUpScrollAnimation";
-import Header from "@/components/pages/home-page/header/Header";
-import Copyright from "@/components/ui/Copyright";
-import Logo from "@/components/ui/Logo";
-import Title from "@/components/ui/Title";
-import Link from "next/link";
 import React from "react";
-
+import {
+  Drawer,
+  DrawerContent,
+  DrawerDescription,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import SlideUpScrollAnimation from "./animation/SlideUpScrollAnimation";
+import Copyright from "./ui/Copyright";
+import Title from "./ui/Title";
 interface CardData {
   title: string;
   text: string;
@@ -57,26 +61,28 @@ const Cards: CardData[] = [
     text: "These Terms constitute the entire agreement between Vision Age Company and the Customer regarding the use of BidPack. If any provision is found unenforceable, it shall be reformed to the minimum extent necessary. Failure by Vision Age Company to enforce any right shall not constitute a waiver of such right.",
   },
 ];
-
-export default function page() {
+export default function TermsC() {
   return (
-    <div className="flex items-center flex-col md:px-50 gap-10 p-5  pt-10">
-      <Header className="w-full gap-5">
-        <Link href={"/"}>
-          <Logo id="terms-header-logo" />
-        </Link>
-        <Title className="z-10 sm:text-xl w-fit p-0 text-md  text-start">
-          Terms & Conditions
-        </Title>
-      </Header>
-
-      {Cards.map((card, index) => (
-        <SlideUpScrollAnimation key={index} className="w-full">
-          <TermsCard cardata={card} />
-        </SlideUpScrollAnimation>
-      ))}
-      <Copyright />
-    </div>
+    <Drawer>
+      <DrawerTrigger className=" hover:underline hover:scale-102 transition-all">
+        Terms & Conditions
+      </DrawerTrigger>
+      <DrawerContent className="z-50">
+        <DrawerHeader>
+          <DrawerTitle>Terms & Conditions</DrawerTitle>
+          <DrawerDescription>
+            <Copyright />
+          </DrawerDescription>
+        </DrawerHeader>
+        <div className=" p-10 space-y-4 z-50 h-[40lvh] overflow-y-auto">
+          {Cards.map((card, index) => (
+            <SlideUpScrollAnimation key={index} className="w-full">
+              <TermsCard cardata={card} />
+            </SlideUpScrollAnimation>
+          ))}
+        </div>
+      </DrawerContent>
+    </Drawer>
   );
 }
 
@@ -90,7 +96,9 @@ const TermsCard = ({ cardata }: Props) => {
       <Title className="text-2xl font-normal border-b border-white w-fit">
         {cardata.title}:
       </Title>
-      <p className=" tracking-wide font-[200]">{cardata.text}</p>
+      <p className=" whitespace-pre-line tracking-wide font-[200]">
+        {cardata.text}
+      </p>
     </div>
   );
 };

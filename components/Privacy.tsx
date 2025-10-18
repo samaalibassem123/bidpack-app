@@ -1,15 +1,20 @@
-import SlideUpScrollAnimation from "@/components/animation/SlideUpScrollAnimation";
-import Header from "@/components/pages/home-page/header/Header";
-import Copyright from "@/components/ui/Copyright";
-import Logo from "@/components/ui/Logo";
-import Title from "@/components/ui/Title";
-import Link from "next/link";
 import React from "react";
-
+import {
+  Drawer,
+  DrawerContent,
+  DrawerDescription,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import SlideUpScrollAnimation from "./animation/SlideUpScrollAnimation";
+import Copyright from "./ui/Copyright";
+import Title from "./ui/Title";
 interface CardData {
   title: string;
   text: string;
 }
+
 const privacyPolicyData: CardData[] = [
   {
     title: "Scope & Definitions",
@@ -84,32 +89,28 @@ const privacyPolicyData: CardData[] = [
   },
 ];
 
-export default function page() {
+export default function Privacy() {
   return (
-    <div className="flex items-center flex-col md:px-50 gap-10 p-5  pt-10">
-      <Header className="w-full gap-5">
-        <Link href={"/"}>
-          <Logo id="terms-header-logo" />
-        </Link>
-        <Title className="  z-10 sm:text-xl w-fit p-0 text-md  text-start">
-          Privacy Policy
-        </Title>
-      </Header>
-      <p className=" tracking-wide font-[300] text-lg">
-        Last updated: October 13, 2025 Vision Age Company FZ LLC (“BidPack”,
-        “we”, “us”, “our”) respects your privacy and is committed to protecting
-        the personal data we process. This Privacy Policy explains how we
-        collect, use, disclose, and store personal data of users and visitors in
-        connection with our services provided through www.bidpack.io and related
-        applications (the “Services”).
-      </p>
-      {privacyPolicyData.map((card, index) => (
-        <SlideUpScrollAnimation className="w-full" key={index}>
-          <TermsCard cardata={card} />
-        </SlideUpScrollAnimation>
-      ))}
-      <Copyright />
-    </div>
+    <Drawer>
+      <DrawerTrigger className=" hover:underline hover:scale-102 transition-all">
+        bidpack - Privacy Policy
+      </DrawerTrigger>
+      <DrawerContent className="z-50">
+        <DrawerHeader>
+          <DrawerTitle>Privacy Policy</DrawerTitle>
+          <DrawerDescription>
+            <Copyright />
+          </DrawerDescription>
+        </DrawerHeader>
+        <div className=" p-10 space-y-4 z-50 h-[40lvh] overflow-y-auto">
+          {privacyPolicyData.map((card, index) => (
+            <SlideUpScrollAnimation key={index} className="w-full">
+              <TermsCard cardata={card} />
+            </SlideUpScrollAnimation>
+          ))}
+        </div>
+      </DrawerContent>
+    </Drawer>
   );
 }
 
@@ -119,11 +120,11 @@ interface Props {
 
 const TermsCard = ({ cardata }: Props) => {
   return (
-    <div className=" flex flex-col gap-3 w-full">
+    <div className=" flex flex-col gap-3">
       <Title className="text-2xl font-normal border-b border-white w-fit">
         {cardata.title}:
       </Title>
-      <p className=" whitespace-pre-line  w-fit tracking-wide font-[200]">
+      <p className=" whitespace-pre-line tracking-wide font-[200]">
         {cardata.text}
       </p>
     </div>

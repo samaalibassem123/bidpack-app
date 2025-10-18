@@ -1,4 +1,4 @@
-import { cn } from "@/utils/utils";
+import { cn } from "@/lib/utils";
 import React from "react";
 
 interface Props {
@@ -10,7 +10,7 @@ export default function FeatureCards({ children, className }: Props) {
   return (
     <div
       className={cn(
-        " mt-10 flex lg:flex-row  flex-col gap-[39px] w-full lg:items-start items-center justify-center",
+        " relative mt-10 flex lg:flex-row h-full   flex-col gap-[39px] w-full lg:items-start items-center justify-center",
         className
       )}
     >

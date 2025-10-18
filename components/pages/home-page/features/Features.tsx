@@ -1,4 +1,4 @@
-import { cn } from "@/utils/utils";
+import { cn } from "@/lib/utils";
 import React from "react";
 interface Props {
   children: React.ReactNode;
@@ -7,9 +7,9 @@ interface Props {
 export default function Features({ children, className }: Props) {
   return (
     <section
-      id="learn-more"
+      id="why-choose-us"
       className={cn(
-        "flex  text-center p-10   flex-col gap-3 items-center  justify-center min-h-lvh  ",
+        "flex  text-center p-10 pt-30   flex-col gap-3 items-center  justify-center min-h-lvh  ",
         className
       )}
     >

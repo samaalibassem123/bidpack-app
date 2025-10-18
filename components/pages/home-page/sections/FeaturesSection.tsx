@@ -6,8 +6,8 @@ import SlideUpScrollAnimation from "@/components/animation/SlideUpScrollAnimatio
 import Title from "@/components/ui/Title";
 import DescriptionText from "@/components/ui/DescriptionText";
 import { Briefcase, FileStack, Lock, Search } from "lucide-react";
-import Image from "next/image";
-import { MacbookImage } from "@/components/ui/macbook-image";
+
+import { DottedGlowBackgroundLogo } from "../features/DottedGlowBackgroundLogo";
 
 export default function FeaturesSection() {
   return (
@@ -53,6 +53,8 @@ export default function FeaturesSection() {
               </DescriptionText>
             </Feature>
           </FeatureCards.LeftSide>
+
+          <DottedGlowBackgroundLogo />
 
           <FeatureCards.RightSide>
             <Feature>

@@ -6,7 +6,10 @@ import SlideUpScrollAnimation from "../../../animation/SlideUpScrollAnimation";
 
 export default function CtaSection() {
   return (
-    <section className="flex flex-col gap-3 w-full items-center justify-center min-h-[50svh] text-center">
+    <section
+      id="join"
+      className="flex flex-col gap-3 w-full items-center justify-center min-h-[50svh] text-center"
+    >
       <SlideUpScrollAnimation>
         <Title className="text-3xl">Ready To Get Started?</Title>
       </SlideUpScrollAnimation>

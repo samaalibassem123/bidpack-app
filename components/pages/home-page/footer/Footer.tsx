@@ -11,18 +11,21 @@ export default function Footer() {
       <nav className="flex gap-10 px-3 text-sm text-center">
         <Link
           href={"/privacy-policy"}
+          target="_blank"
           className=" hover:underline hover:scale-102 transition-all"
         >
           BidPack – Privacy Policy
         </Link>
         <Link
           href={"/terms-conditions"}
+          target="_blank"
           className=" hover:underline hover:scale-102 transition-all"
         >
           Terms & Conditions
         </Link>
         <Link
           href={"/contact"}
+          target="_blank"
           className=" hover:underline hover:scale-102 transition-all"
         >
           Contact Information

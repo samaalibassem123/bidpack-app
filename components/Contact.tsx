@@ -13,7 +13,7 @@ import Copyright from "./ui/Copyright";
 export default function Contact() {
   return (
     <Drawer>
-      <DrawerTrigger className=" hover:underline hover:scale-102 transition-all">
+      <DrawerTrigger className=" hover:underline  cursor-pointer">
         Contact Information
       </DrawerTrigger>
       <DrawerContent className="z-50">

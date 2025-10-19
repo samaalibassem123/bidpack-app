@@ -10,6 +10,8 @@ import {
 import SlideUpScrollAnimation from "./animation/SlideUpScrollAnimation";
 import Copyright from "./ui/Copyright";
 import Title from "./ui/Title";
+import { ScrollArea } from "./ui/scroll-area";
+
 interface CardData {
   title: string;
   text: string;
@@ -64,23 +66,23 @@ const Cards: CardData[] = [
 export default function TermsC() {
   return (
     <Drawer>
-      <DrawerTrigger className=" hover:underline hover:scale-102 transition-all">
+      <DrawerTrigger className=" hover:underline cursor-pointer">
         Terms & Conditions
       </DrawerTrigger>
-      <DrawerContent className="z-50">
+      <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>Terms & Conditions</DrawerTitle>
           <DrawerDescription>
             <Copyright />
           </DrawerDescription>
         </DrawerHeader>
-        <div className=" p-10 space-y-4 z-50 h-[40lvh] overflow-y-auto">
+        <ScrollArea className="p-10 h-[50svh]">
           {Cards.map((card, index) => (
-            <SlideUpScrollAnimation key={index} className="w-full">
+            <SlideUpScrollAnimation key={card.title} className="w-full">
               <TermsCard cardata={card} />
             </SlideUpScrollAnimation>
           ))}
-        </div>
+        </ScrollArea>
       </DrawerContent>
     </Drawer>
   );

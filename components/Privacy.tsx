@@ -108,11 +108,13 @@ export default function Privacy() {
         </DrawerHeader>
 
         <ScrollArea className="p-10 h-[50svh]">
-          {privacyPolicyData.map((card, index) => (
-            <SlideUpScrollAnimation key={card.title} className="w-full">
-              <TermsCard cardata={card} />
-            </SlideUpScrollAnimation>
-          ))}
+          <div className=" space-y-10">
+            {privacyPolicyData.map((card, index) => (
+              <SlideUpScrollAnimation key={card.title} className="w-full">
+                <TermsCard cardata={card} />
+              </SlideUpScrollAnimation>
+            ))}
+          </div>
         </ScrollArea>
       </DrawerContent>
     </Drawer>

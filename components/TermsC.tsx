@@ -77,11 +77,13 @@ export default function TermsC() {
           </DrawerDescription>
         </DrawerHeader>
         <ScrollArea className="p-10 h-[50svh]">
-          {Cards.map((card, index) => (
-            <SlideUpScrollAnimation key={card.title} className="w-full">
-              <TermsCard cardata={card} />
-            </SlideUpScrollAnimation>
-          ))}
+          <div className=" space-y-10">
+            {Cards.map((card, index) => (
+              <SlideUpScrollAnimation key={card.title} className="w-full">
+                <TermsCard cardata={card} />
+              </SlideUpScrollAnimation>
+            ))}
+          </div>
         </ScrollArea>
       </DrawerContent>
     </Drawer>

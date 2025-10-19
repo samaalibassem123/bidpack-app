@@ -3,15 +3,12 @@ import { ReactLenis } from "lenis/react";
 import type { LenisRef } from "lenis/react";
 import { cancelFrame, frame } from "framer-motion";
 import { useEffect, useRef } from "react";
-
-export const globalLenisRef: { current: LenisRef | null } = { current: null };
+import { useScrollStore } from "@/store/smoothScorller";
 
 export default function SmoothScrollWrapper() {
+  const { SmoothScrolling } = useScrollStore();
   const lenisRef = useRef<LenisRef>(null);
-
   useEffect(() => {
-    globalLenisRef.current = lenisRef.current;
-
     function update(data: { timestamp: number }) {
       const time = data.timestamp;
       lenisRef.current?.lenis?.raf(time);
@@ -20,6 +17,9 @@ export default function SmoothScrollWrapper() {
     frame.update(update, true);
     return () => cancelFrame(update);
   }, []);
-
-  return <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />;
+  if (SmoothScrolling) {
+    return <ReactLenis root="asChild" options={{ autoRaf: true }} />;
+  } else {
+    return null;
+  }
 }

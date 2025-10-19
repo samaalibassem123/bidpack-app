@@ -13,6 +13,7 @@ import Copyright from "./ui/Copyright";
 import Title from "./ui/Title";
 
 import { ScrollArea } from "./ui/scroll-area";
+import { useScrollStore } from "@/store/smoothScorller";
 
 interface CardData {
   title: string;
@@ -94,8 +95,10 @@ const privacyPolicyData: CardData[] = [
 ];
 
 export default function Privacy() {
+  const { SmoothScrolling, setSmoothScrolling } = useScrollStore();
+
   return (
-    <Drawer>
+    <Drawer onOpenChange={() => setSmoothScrolling(!SmoothScrolling)}>
       <DrawerTrigger className=" hover:underline cursor-pointer ">
         bidpack - Privacy Policy
       </DrawerTrigger>

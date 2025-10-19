@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Drawer,
@@ -11,6 +12,7 @@ import SlideUpScrollAnimation from "./animation/SlideUpScrollAnimation";
 import Copyright from "./ui/Copyright";
 import Title from "./ui/Title";
 import { ScrollArea } from "./ui/scroll-area";
+import { useScrollStore } from "@/store/smoothScorller";
 
 interface CardData {
   title: string;
@@ -64,8 +66,10 @@ const Cards: CardData[] = [
   },
 ];
 export default function TermsC() {
+  const { SmoothScrolling, setSmoothScrolling } = useScrollStore();
+
   return (
-    <Drawer>
+    <Drawer onOpenChange={() => setSmoothScrolling(!SmoothScrolling)}>
       <DrawerTrigger className=" hover:underline cursor-pointer">
         Terms & Conditions
       </DrawerTrigger>

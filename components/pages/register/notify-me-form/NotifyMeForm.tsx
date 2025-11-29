@@ -1,19 +1,35 @@
 "use client";
-import { useActionState, useState } from "react";
-import { addEmailToGoogleSheet } from "./actions/NotifyMe";
-import { Spinner } from "@/components/ui/spinner";
 
+import { useState } from "react";
+import { Spinner } from "@/components/ui/spinner";
 import { motion } from "framer-motion";
 
 export default function NotifyMeForm() {
   const [email, setEmail] = useState("");
-  const [state, action, pending] = useActionState(
-    addEmailToGoogleSheet,
-    undefined
-  );
+  const [pending, setPending] = useState(false);
+  const [state, setState] = useState<any>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setPending(true);
+    setState(null);
+
+    const res = await fetch("/api/add-email", {
+      method: "POST",
+      body: JSON.stringify({ email }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    const result = await res.json();
+    setState(result);
+    setPending(false);
+  };
 
   return (
-    <form action={action} className="flex flex-col gap-5 sm:w-fit w-full">
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-5 sm:w-fit w-full"
+    >
       {state?.success ? (
         <div className="w-full text-center flex flex-col gap-4 items-center justify-center ">
           <div className="border rounded-full p-4">
@@ -38,8 +54,8 @@ export default function NotifyMeForm() {
             </svg>
           </div>
           <p className=" text-green-300 flex flex-col gap-2">
-            <span className=" font-semibold">{email}</span> Added Succefully to
-            the waiting List !
+            <span className=" font-semibold">{email}</span> Added successfully
+            to the waiting list!
           </p>
         </div>
       ) : (
@@ -50,14 +66,16 @@ export default function NotifyMeForm() {
             onChange={(e) => setEmail(e.target.value)}
             name="email"
             placeholder="Email address"
-            className="border border-[#5473C133] sm:w-sm w-full outline-none  p-4 rounded-md"
+            className="border border-[#5473C133] sm:w-sm w-full outline-none p-4 rounded-md"
           />
-          {state?.MailError && (
-            <p className="text-sm text-red-400 ">* {state.MailError}</p>
+
+          {state?.message && !state?.success && (
+            <p className="text-sm text-red-400 ">* {state.message}</p>
           )}
+
           <button
             disabled={pending}
-            className="border-y flex items-center justify-center gap-2 disabled:cursor-progress disabled:opacity-75 disabled:scale-95 transition-all border-white/20 px-5 py-3 cursor-pointer  rounded-md bg-gradient-to-br from-[#5473C133] from-50% to-white/10  hover: "
+            className="border-y flex items-center justify-center gap-2 disabled:cursor-progress disabled:opacity-75 disabled:scale-95 transition-all border-white/20 px-5 py-3 cursor-pointer rounded-md bg-gradient-to-br from-[#5473C133] from-50% to-white/10"
           >
             {pending && <Spinner />}
             Notify Me

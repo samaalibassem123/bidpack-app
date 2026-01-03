@@ -14,8 +14,8 @@ export default function FunctionalitiesSection() {
       </SlideUpScrollAnimation>
       <SlideUpScrollAnimation>
         <DescriptionText>
-          A comprehensive suite of tools to power your entire production
-          lifecycle, from discovery to delivery.
+          A unified platform designed for vendor collaboration, not internal
+          production management.
         </DescriptionText>
       </SlideUpScrollAnimation>
 
@@ -24,41 +24,46 @@ export default function FunctionalitiesSection() {
           <FunctionalitieCard.FunctionalitieIcon>
             <Search className="size-10" />
           </FunctionalitieCard.FunctionalitieIcon>
-          <Title className="text-xl">Vendor Discovery</Title>
+          <Title className="text-xl">Vendor Discovery & Selection</Title>
           <DescriptionText className="text-sm">
-            Find the perfect studio with powerful search filters and detailed
-            profiles.
+            Find the right outsourcing partners using advanced filters based on
+            services, location, time zone, tools, workflow, and availability.
+            Discover studios and vendors that truly match your production needs.
           </DescriptionText>
         </FunctionalitieCard>
         <FunctionalitieCard>
           <FunctionalitieCard.FunctionalitieIcon>
             <Briefcase className="size-10" />
           </FunctionalitieCard.FunctionalitieIcon>
-          <Title className="text-xl">Project Management</Title>
+          <Title className="text-xl">
+            Vendor Pool & Collaboration Management
+          </Title>
           <DescriptionText className="text-sm">
-            Keep your projects on track with clear dashboards and progress
-            monitoring.
+            Build and manage your own vendor pool from trusted partners and
+            long-term collaborators. Keep full control over who you work with,
+            project after project.
           </DescriptionText>
         </FunctionalitieCard>
         <FunctionalitieCard>
           <FunctionalitieCard.FunctionalitieIcon>
             <ListTodo className="size-10" />
           </FunctionalitieCard.FunctionalitieIcon>
-          <Title className="text-xl">Integrated Task Tracking</Title>
+          <Title className="text-xl">Outsourced Task & Delivery Tracking</Title>
           <DescriptionText className="text-sm">
-            Assign tasks, set deadlines, and monitor progress from start to
-            finish.
+            Share tasks, briefs, deadlines, and materials with your vendors.
+            Track outsourced work, deliveries, and progress with full
+            transparency—without micromanagement.
           </DescriptionText>
         </FunctionalitieCard>
         <FunctionalitieCard>
           <FunctionalitieCard.FunctionalitieIcon>
             <MessagesSquare className="size-10" />
           </FunctionalitieCard.FunctionalitieIcon>
-          <Title className="text-xl">
-            Real-Time <br /> Communication
-          </Title>
+          <Title className="text-xl">Centralized Vendor Communication</Title>
           <DescriptionText className="  text-sm">
-            Chat with vendors and team members directly within the platform.
+            Communicate with vendors directly inside BidPack. All discussions
+            stay linked to projects and tasks, ensuring clarity, traceability,
+            and faster decisions.
           </DescriptionText>
         </FunctionalitieCard>
       </div>

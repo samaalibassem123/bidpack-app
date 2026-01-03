@@ -15,53 +15,52 @@ interface SlideData {
 
 const images: SlideData[] = [
   {
-    title:
-      "Create and manage your outsourced projects with your preferred vendors",
-    desc: "Centralized project management for all your external collaborations",
-    src: "/assets/MyProjects.jpeg",
-    text: `Organize all your outsourced productions in one place. Assign services to external vendors, monitor their progress, deadlines, and delivery stages — keeping every collaboration transparent and efficient.`,
+    title: "Build Your Company Profile",
+    desc: "Showcase your expertise and become visible in vendor searches",
+    text: `Create your company profile to showcase your expertise and become visible in vendors and studios searches. Highlight your services, tools, team, and certifications to attract the right partners.`,
+    src: "/assets/CompanyProfile.png", // placeholder, replace with your image path
   },
   {
-    title: "Build your Vendor Pool and manage trusted collaborations",
-    desc: "A personalized list of approved external studios and service providers",
-    src: "/assets/VendorPool.jpeg",
-    text: `Create your own list of trusted vendors. Review their profiles, check availability, and add them to your pool to always find the right partner for each outsourced project.`,
+    title: "Discover Studios & Vendors",
+    desc: "Find the best partners worldwide with advanced filters",
+    text: `Find studios and vendors worldwide using advanced filters such as location, time zone, industry, services, and tools. Identify the best partners for your production needs in just a few clicks.`,
+    src: "/assets/DiscoverVendors.png",
   },
   {
-    title: "Collaborate in real time with your external partners",
-    desc: "Built-in messaging system for smooth communication",
-    src: "/assets/Messages.jpeg",
-    text: `Chat directly with your vendors and studios through our built-in messaging system. Discuss briefs, share updates, and manage communication professionally across all your ongoing collaborations.`,
+    title: "Build Your Vendor Pool",
+    desc: "Curate a network of trusted connections and long-term partners",
+    text: `Build your own vendor pool from trusted connections and long-term partners. Create a curated network of vendors you know, trust, and want to collaborate with again.`,
+    src: "/assets/BuildVendorPool.png",
   },
   {
-    title: "Stay in control of who joins your network",
-    desc: "Approve or decline vendor connection requests securely",
-    src: "/assets/ConnectionReq.jpeg",
-    text: `Review and approve connection requests from studios and vendors who want to collaborate with you. Build and maintain a secure network of reliable outsourcing partners that grows with your needs.`,
+    title: "Set Up Your Projects",
+    desc: "Define project scope, timelines, and collaboration settings",
+    text: `Create and structure your projects easily. Define project scope, timelines, services needed, and collaboration settings to prepare a clear and efficient outsourcing workflow.`,
+    src: "/assets/SetUpProjects.png",
   },
   {
-    title: "Invite multiple vendors with Silent Bid",
-    desc: "Confidential bidding process for fair and efficient outsourcing",
-    src: "/assets/SilentBid.jpeg",
-    text: `Share a task with several vendors without revealing competition. Each vendor submits a private offer, and you choose the most suitable bid — ensuring a fair, confidential, and efficient process.`,
+    title: "Assign Trusted Vendors",
+    desc: "Choose the right partner for each service",
+    text: `Assign vendors from your pool directly to your projects. Choose the right partner for each service and control access based on your collaboration strategy.`,
+    src: "/assets/AssignVendors.png",
   },
   {
-    title: "Track quality and alerts through the Ping Center",
-    desc: "Centralized hub for alerts, performance updates, and feedback",
-    src: "/assets/PingCenter.jpeg",
-    text: `Centralize all performance alerts, feedback, and quality control updates from your vendors. Stay informed on every change — from ETA adjustments to delivery issues — and keep your projects on track.`,
+    title: "Manage Tasks & Outsourcing",
+    desc: "Track progress and maintain full visibility",
+    text: `Share tasks, briefs, materials, deadlines, and updates with your vendors. Track progress, manage deliveries, and maintain full visibility over outsourced work in one place.`,
+    src: "/assets/ManageTasks.png",
   },
   {
-    title: "Request bids and delivery estimates instantly",
-    desc: "Instant quotes and timeline comparison",
-    src: "/assets/BidEstimates.jpeg",
-    text: `Get fast, accurate quotes and delivery timelines from your vendors. Compare offers, evaluate availability, and make data-driven outsourcing decisions — without endless back-and-forth emails.`,
+    title: "Communicate in Real Time",
+    desc: "Centralize discussions, feedback, and decisions",
+    text: `Communicate with your vendors in real time through integrated messaging. Centralize discussions, feedback, and decisions to keep collaboration fast, clear, and efficient.`,
+    src: "/assets/CommunicateRealTime.png",
   },
   {
-    title: "Analyze vendor performance and optimize collaborations",
-    desc: "Performance analytics and insights for continuous improvement",
-    src: "/assets/VendorAnalytics.jpeg",
-    text: `Access real-time insights on vendor performance based on response speed, delivery accuracy, and quality feedback. Identify your best partners and refine your outsourcing strategy with every new project.`,
+    title: "Check Vendor Availability by Service",
+    desc: "Plan assignments with confidence using availability data",
+    text: `Check your vendor’s availability per service and time period. Instantly see when a vendor is available, limited, or unavailable for a specific service to plan assignments with confidence.`,
+    src: "/assets/CheckAvailability.png",
   },
 ];
 
@@ -82,7 +81,7 @@ export function ScrollImages() {
                 src={img.src}
                 height={60}
                 width={630}
-                className=" rounded-3xl"
+                className=" rounded-3xl max-h-200"
                 alt={img.title}
               />
               <div className=" space-y-4">

@@ -25,7 +25,7 @@ export default function Home() {
         <Background />
         <Header>
           <Logo id="header-logo" className="header-logo" />
-          <ButtonsContainer className=" lg:flex hidden">
+          <ButtonsContainer className=" xl:flex hidden">
             <Link href={"#Features"}>Features</Link>
             <Link href={"#functionalities"}>Functionalities</Link>
             <Link href={"#why-choose-us"}>Why Choose Us?</Link>

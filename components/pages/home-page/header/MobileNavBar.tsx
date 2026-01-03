@@ -18,7 +18,7 @@ import Copyright from "@/components/ui/Copyright";
 
 export default function MobileNavBar() {
   return (
-    <div className="lg:hidden flex">
+    <div className="xl:hidden flex">
       <Sheet>
         <SheetTrigger className=" cursor-pointer">
           <Menu />

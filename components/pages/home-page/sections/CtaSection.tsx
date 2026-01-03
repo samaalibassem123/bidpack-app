@@ -4,6 +4,8 @@ import DescriptionText from "../../../ui/DescriptionText";
 import Link from "next/link";
 import SlideUpScrollAnimation from "../../../animation/SlideUpScrollAnimation";
 
+const BIDPACK_APP_URL = "https://bidpackapp.com/";
+
 export default function CtaSection() {
   return (
     <section
@@ -21,7 +23,7 @@ export default function CtaSection() {
       </SlideUpScrollAnimation>
 
       <Link
-        href={"/register"}
+        href={BIDPACK_APP_URL}
         className=" bg-gradient-to-br mt-10  text-white hover:opacity-80 transition-all from-[#5473C133] to-white/10 inset-shadow-lg w-[180px] text-center px-[24px] py-[10px]  backdrop-blur-[8px] border-y border-y-white/20 rounded-[12px]"
       >
         Join Now

@@ -5,11 +5,11 @@ import React from "react";
 interface Props {
   className?: string;
 }
-
+const LOGIN_URL = "https://bidpackapp.com/workspace/navigate";
 export default function Login({ className }: Props) {
   return (
     <Link
-      href={"/register"}
+      href={LOGIN_URL}
       className={cn("hover:opacity-80 transition-all font-semibold", className)}
     >
       Login

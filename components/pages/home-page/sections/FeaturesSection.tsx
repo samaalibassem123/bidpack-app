@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Feature from "@/components/pages/home-page/features/Feature";
 import FeatureCards from "@/components/pages/home-page/features/FeatureCards";
@@ -5,13 +7,20 @@ import Features from "@/components/pages/home-page/features/Features";
 import SlideUpScrollAnimation from "@/components/animation/SlideUpScrollAnimation";
 import Title from "@/components/ui/Title";
 import DescriptionText from "@/components/ui/DescriptionText";
-import { Briefcase, FileStack, Lock, Search } from "lucide-react";
+import {
+  Briefcase,
+  Building,
+  Network,
+  PenBox,
+  TrainTrackIcon,
+  Users2Icon,
+} from "lucide-react";
 
 import { DottedGlowBackgroundLogo } from "../features/DottedGlowBackgroundLogo";
 
 export default function FeaturesSection() {
   return (
-    <Features>
+    <Features className="px-0 relative">
       <SlideUpScrollAnimation>
         <Title className="text-xl">Why Choose Us?</Title>
       </SlideUpScrollAnimation>
@@ -27,60 +36,85 @@ export default function FeaturesSection() {
         </DescriptionText>
       </SlideUpScrollAnimation>
 
-      <SlideUpScrollAnimation>
+      <SlideUpScrollAnimation className="relative">
+        <Feature>
+          <Feature.Icon>
+            <Building />
+          </Feature.Icon>
+          <div className="flex items-center gap-2">
+            <Feature.Icon>1</Feature.Icon>{" "}
+            <Title className="text-xl"> Create Your Company Profile</Title>
+          </div>
+
+          <DescriptionText>
+            Your profile becomes your identity <br /> within the BidPack
+            ecosystem.
+          </DescriptionText>
+        </Feature>
         <FeatureCards>
-          <FeatureCards.LeftSide>
+          <FeatureCards.LeftSide className="flex-1">
             <Feature>
               <Feature.Icon>
-                <Search />
+                <TrainTrackIcon />
               </Feature.Icon>
-              <Title className="text-xl">Find the right vendor instantly</Title>
+              <Title className="text-xl"> Track & Manage the Project</Title>
               <DescriptionText>
-                Search and filter vendors by services,
-                <br /> certifications, workflow, tools, and availability. <br />{" "}
-                Build your own Vendor Pools and keep <br /> everything in one
-                place.
+                Monitor progress, deliveries, and <br /> collaboration in real
+                time. <br /> Keep full transparency across <br /> vendors,
+                tasks, and timelines.
               </DescriptionText>
             </Feature>
             <Feature>
               <Feature.Icon>
                 <Briefcase />
               </Feature.Icon>
-              <Title className="text-xl">Real-time bids & ETA</Title>
+              <Title className="text-xl">Assign Vendors to Your Project</Title>
               <DescriptionText>
-                Get accurate bids and delivery estimates <br /> directly on the
-                platform, without endless email <br /> exchanges.
+                Select vendors from your pool and assign <br /> them to specific
+                services or tasks. Control access,
+                <br /> responsibilities, and visibility.
               </DescriptionText>
             </Feature>
           </FeatureCards.LeftSide>
 
           <DottedGlowBackgroundLogo />
 
-          <FeatureCards.RightSide>
+          <FeatureCards.RightSide className="flex-1">
             <Feature>
               <Feature.Icon>
-                <Lock />
+                <Network />
               </Feature.Icon>
-              <Title className="text-xl">
-                Request & confirm <br /> availability in one click
-              </Title>
+              <Title className="text-xl">Build Your Network</Title>
               <DescriptionText>
-                Share project details securely, invite vendors, <br /> and
-                receive instant confirmation of availability.
+                Connect with studios and vendors worldwide.
               </DescriptionText>
             </Feature>
             <Feature>
               <Feature.Icon>
-                <FileStack />
+                <Users2Icon />
               </Feature.Icon>
-              <Title className="text-xl">Seamless project tracking</Title>
+              <Title className="text-xl">Build Your Vendor Pool</Title>
               <DescriptionText>
-                Assign tasks, share briefs and project data, <br /> and track
-                progress in real-time with complete <br /> transparency.
+                Create your own curated <br /> vendor pool from trusted partners{" "}
+                <br /> and past collaborations. <br /> Your vendor pool becomes
+                your <br />
+                private outsourcing network.
               </DescriptionText>
             </Feature>
           </FeatureCards.RightSide>
         </FeatureCards>
+        <Feature>
+          <Feature.Icon>
+            <PenBox />
+          </Feature.Icon>
+          <Title className="text-xl">Create Your Project</Title>
+          <DescriptionText>
+            Set up your project, define scope, <br /> services, timelines,{" "}
+            <br />
+            and collaboration rules. <br /> Prepare a clean <br />
+            and structured outsourcing environment.
+          </DescriptionText>
+        </Feature>
       </SlideUpScrollAnimation>
     </Features>
   );

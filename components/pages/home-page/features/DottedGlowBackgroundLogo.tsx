@@ -3,7 +3,7 @@ import DottedGlowBackground from "@/components/ui/dotted-glow-background";
 
 export function DottedGlowBackgroundLogo() {
   return (
-    <div className="relative flex size-60 items-end justify-end overflow-hidden rounded-full  px-4 bg-transparent  md:size-100 ">
+    <div className="flex-1 relative flex size-60 items-end justify-end overflow-hidden rounded-full  px-4 bg-transparent  md:size-100 ">
       <svg
         width="153"
         height="48"
@@ -11,7 +11,7 @@ export function DottedGlowBackgroundLogo() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        className="absolute inset-0 z-20 m-auto size-30 md:size-50 "
+        className="absolute inset-0 z-20 m-auto size-30  lg:size-40 xl:size-50"
       >
         <rect width="152.61" height="47.0572" fill="url(#pattern0_7530_4292)" />
         <defs>
@@ -37,7 +37,7 @@ export function DottedGlowBackgroundLogo() {
       </svg>
 
       <DottedGlowBackground
-        className="pointer-events-none mask-radial-to-90% mask-radial-at-center"
+        className="pointer-events-none mask-radial-to-90% mask-radial-at-center flex-1"
         opacity={1}
         gap={10}
         radius={1.6}

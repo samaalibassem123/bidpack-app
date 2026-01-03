@@ -3,7 +3,7 @@ import DottedGlowBackground from "@/components/ui/dotted-glow-background";
 
 export function DottedGlowBackgroundLogo() {
   return (
-    <div className="flex-1 relative flex size-60 items-end justify-end overflow-hidden rounded-full  px-4 bg-transparent  md:size-100 ">
+    <div className=" relative flex size-60 items-end justify-end overflow-hidden rounded-full  px-4 bg-transparent  md:size-100 ">
       <svg
         width="153"
         height="48"

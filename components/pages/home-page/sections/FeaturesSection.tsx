@@ -38,11 +38,8 @@ export default function FeaturesSection() {
 
       <SlideUpScrollAnimation className="relative">
         <Feature>
-          <Feature.Icon>
-            <Building />
-          </Feature.Icon>
+          <Feature.Icon className="text-lg font-bold">1</Feature.Icon>
           <div className="flex items-center gap-2">
-            <Feature.Icon>1</Feature.Icon>{" "}
             <Title className="text-xl"> Create Your Company Profile</Title>
           </div>
 
@@ -54,9 +51,8 @@ export default function FeaturesSection() {
         <FeatureCards>
           <FeatureCards.LeftSide className="flex-1">
             <Feature>
-              <Feature.Icon>
-                <TrainTrackIcon />
-              </Feature.Icon>
+              <Feature.Icon className="text-lg font-bold">6</Feature.Icon>
+
               <Title className="text-xl"> Track & Manage the Project</Title>
               <DescriptionText>
                 Monitor progress, deliveries, and <br /> collaboration in real
@@ -65,9 +61,8 @@ export default function FeaturesSection() {
               </DescriptionText>
             </Feature>
             <Feature>
-              <Feature.Icon>
-                <Briefcase />
-              </Feature.Icon>
+              <Feature.Icon className="text-lg font-bold">5</Feature.Icon>
+
               <Title className="text-xl">Assign Vendors to Your Project</Title>
               <DescriptionText>
                 Select vendors from your pool and assign <br /> them to specific
@@ -81,18 +76,14 @@ export default function FeaturesSection() {
 
           <FeatureCards.RightSide className="flex-1">
             <Feature>
-              <Feature.Icon>
-                <Network />
-              </Feature.Icon>
+              <Feature.Icon className="text-lg font-bold">2</Feature.Icon>
               <Title className="text-xl">Build Your Network</Title>
               <DescriptionText>
                 Connect with studios and vendors worldwide.
               </DescriptionText>
             </Feature>
             <Feature>
-              <Feature.Icon>
-                <Users2Icon />
-              </Feature.Icon>
+              <Feature.Icon className="text-lg font-bold">3</Feature.Icon>
               <Title className="text-xl">Build Your Vendor Pool</Title>
               <DescriptionText>
                 Create your own curated <br /> vendor pool from trusted partners{" "}
@@ -104,9 +95,8 @@ export default function FeaturesSection() {
           </FeatureCards.RightSide>
         </FeatureCards>
         <Feature>
-          <Feature.Icon>
-            <PenBox />
-          </Feature.Icon>
+          <Feature.Icon className="text-lg font-bold">4</Feature.Icon>
+
           <Title className="text-xl">Create Your Project</Title>
           <DescriptionText>
             Set up your project, define scope, <br /> services, timelines,{" "}

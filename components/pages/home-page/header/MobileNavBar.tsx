@@ -35,10 +35,10 @@ export default function MobileNavBar() {
               <Link href={"#Features"}>Features</Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href={"#functionalities"}>Functionalities</Link>
+              <Link href={"#why-choose-us"}>Why Choose Us?</Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href={"#why-choose-us"}>Why Choose Us?</Link>
+              <Link href={"#functionalities"}>Functionalities</Link>
             </SheetClose>
             <SheetClose asChild>
               <Link href={"#join"}>Ready To Get Started ?</Link>

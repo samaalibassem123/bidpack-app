@@ -27,8 +27,8 @@ export default function Home() {
           <Logo id="header-logo" className="header-logo" />
           <ButtonsContainer className=" xl:flex hidden">
             <Link href={"#Features"}>Features</Link>
-            <Link href={"#functionalities"}>Functionalities</Link>
             <Link href={"#why-choose-us"}>Why Choose Us?</Link>
+            <Link href={"#functionalities"}>Functionalities</Link>
             <Link href={"#join"}>Ready To Get Started ?</Link>
             <div className="h-8 bg-white/20 w-[1px]"></div>
             <Login />

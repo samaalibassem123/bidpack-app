@@ -49,9 +49,9 @@ export default function FeaturesSection() {
           </DescriptionText>
         </Feature>
         <FeatureCards>
-          <FeatureCards.LeftSide className="flex-1">
-            <Feature>
-              <Feature.Icon className="text-lg font-bold">6</Feature.Icon>
+          <FeatureCards.LeftSide className="flex-1 lg:items-start items-center">
+            <Feature className="lg:items-start lg:text-left ">
+              <Feature.Icon className="text-lg  font-bold">6</Feature.Icon>
 
               <Title className="text-xl"> Track & Manage the Project</Title>
               <DescriptionText>
@@ -60,29 +60,29 @@ export default function FeaturesSection() {
                 tasks, and timelines.
               </DescriptionText>
             </Feature>
-            <Feature>
+            <Feature className=" lg:items-start lg:text-left">
               <Feature.Icon className="text-lg font-bold">5</Feature.Icon>
 
               <Title className="text-xl">Assign Vendors to Your Project</Title>
               <DescriptionText>
-                Select vendors from your pool and assign <br /> them to specific
-                services or tasks. Control access,
-                <br /> responsibilities, and visibility.
+                Select vendors from your pool and assign them to specific
+                services or tasks.
+                <br /> Control access, responsibilities, and visibility.
               </DescriptionText>
             </Feature>
           </FeatureCards.LeftSide>
 
           <DottedGlowBackgroundLogo />
 
-          <FeatureCards.RightSide className="flex-1">
-            <Feature>
+          <FeatureCards.RightSide className="flex-1 lg:items-end items-center">
+            <Feature className="lg:items-end lg:text-right">
               <Feature.Icon className="text-lg font-bold">2</Feature.Icon>
               <Title className="text-xl">Build Your Network</Title>
               <DescriptionText>
                 Connect with studios and vendors worldwide.
               </DescriptionText>
             </Feature>
-            <Feature>
+            <Feature className="lg:items-end lg:text-right">
               <Feature.Icon className="text-lg font-bold">3</Feature.Icon>
               <Title className="text-xl">Build Your Vendor Pool</Title>
               <DescriptionText>

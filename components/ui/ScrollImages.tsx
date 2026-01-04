@@ -81,7 +81,7 @@ export function ScrollImages() {
                 src={img.src}
                 height={60}
                 width={630}
-                className=" rounded-3xl max-h-100 "
+                className=" rounded-3xl"
                 alt={img.title}
               />
               <div className=" space-y-4">

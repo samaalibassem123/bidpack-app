@@ -9,7 +9,7 @@ interface Props {
 
 export default function Feature({ children, className }: Props) {
   return (
-    <SlideUpScrollAnimation>
+    <SlideUpScrollAnimation className="w-full">
       <div
         className={cn(
           "flex flex-col gap-1 text-center  items-center",

@@ -48,23 +48,28 @@ export default function FeaturesSection() {
             ecosystem.
           </DescriptionText>
         </Feature>
-        <FeatureCards>
-          <FeatureCards.LeftSide className="flex-1 lg:items-start items-center">
-            <Feature className="lg:items-start lg:text-left ">
-              <Feature.Icon className="text-lg  font-bold">6</Feature.Icon>
+        <FeatureCards className=" justify-between">
+          <FeatureCards.LeftSide className="   lg:w-[20%] w-full lg:items-start items-center  gap-3 ">
+            <Feature className="lg:items-center lg:text-left ">
+              <Feature.Icon className="text-lg   font-bold">6</Feature.Icon>
 
-              <Title className="text-xl"> Track & Manage the Project</Title>
-              <DescriptionText>
+              <Title className="text-xl w-full lg:text-left">
+                {" "}
+                Track & Manage the Project
+              </Title>
+              <DescriptionText className="w-full lg:text-left">
                 Monitor progress, deliveries, and <br /> collaboration in real
                 time. <br /> Keep full transparency across <br /> vendors,
                 tasks, and timelines.
               </DescriptionText>
             </Feature>
-            <Feature className=" lg:items-start lg:text-left">
-              <Feature.Icon className="text-lg font-bold">5</Feature.Icon>
+            <Feature className=" lg:items-center lg:text-left ">
+              <Feature.Icon className="text-lg font-bold ">5</Feature.Icon>
 
-              <Title className="text-xl">Assign Vendors to Your Project</Title>
-              <DescriptionText>
+              <Title className="text-xl w-full lg:text-left">
+                Assign Vendors to Your Project
+              </Title>
+              <DescriptionText className=" w-full lg:text-left">
                 Select vendors from your pool and assign them to specific
                 services or tasks.
                 <br /> Control access, responsibilities, and visibility.
@@ -74,27 +79,30 @@ export default function FeaturesSection() {
 
           <DottedGlowBackgroundLogo />
 
-          <FeatureCards.RightSide className="flex-1 lg:items-end items-center">
-            <Feature className="lg:items-end lg:text-right">
+          <FeatureCards.RightSide className="  lg:w-[20%] w-full lg:items-start items-center">
+            <Feature className="lg:items-center lg:text-left  w-full">
               <Feature.Icon className="text-lg font-bold">2</Feature.Icon>
-              <Title className="text-xl">Build Your Network</Title>
-              <DescriptionText>
+              <Title className="text-xl w-full lg:text-left">
+                Build Your Network
+              </Title>
+              <DescriptionText className="w-full">
                 Connect with studios and vendors worldwide.
               </DescriptionText>
             </Feature>
-            <Feature className="lg:items-end lg:text-right">
+            <Feature className="lg:items-center lg:text-left w-full ">
               <Feature.Icon className="text-lg font-bold">3</Feature.Icon>
-              <Title className="text-xl">Build Your Vendor Pool</Title>
-              <DescriptionText>
-                Create your own curated <br /> vendor pool from trusted partners{" "}
-                <br /> and past collaborations. <br /> Your vendor pool becomes
-                your <br />
+              <Title className="text-xl w-full lg:text-left">
+                Build Your Vendor Pool
+              </Title>
+              <DescriptionText className="w-full">
+                Create your own curated vendor pool from trusted partners and
+                past collaborations. <br /> Your vendor pool becomes your
                 private outsourcing network.
               </DescriptionText>
             </Feature>
           </FeatureCards.RightSide>
         </FeatureCards>
-        <Feature>
+        <Feature className="mt-5">
           <Feature.Icon className="text-lg font-bold">4</Feature.Icon>
 
           <Title className="text-xl">Create Your Project</Title>

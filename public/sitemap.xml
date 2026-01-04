@@ -11,13 +11,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Notify ME Page -->
-  <url>
-    <loc>https://bidpack-app.vercel.app/register</loc>
-    <lastmod>2025-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+  
 
 </urlset>

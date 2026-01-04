@@ -37,13 +37,16 @@ export default function FeaturesSection() {
       </SlideUpScrollAnimation>
 
       <SlideUpScrollAnimation className="relative">
-        <Feature>
+        <Feature className="">
           <Feature.Icon className="text-lg font-bold">1</Feature.Icon>
           <div className="flex items-center gap-2">
-            <Title className="text-xl"> Create Your Company Profile</Title>
+            <Title className="text-xl lg:text-left">
+              {" "}
+              Create Your Company Profile
+            </Title>
           </div>
 
-          <DescriptionText>
+          <DescriptionText className="lg:text-left lg:-ml-4">
             Your profile becomes your identity <br /> within the BidPack
             ecosystem.
           </DescriptionText>
@@ -102,16 +105,16 @@ export default function FeaturesSection() {
             </Feature>
           </FeatureCards.RightSide>
         </FeatureCards>
-        <Feature className="mt-5">
+        <Feature className="mt-5 ">
           <Feature.Icon className="text-lg font-bold">4</Feature.Icon>
-
-          <Title className="text-xl">Create Your Project</Title>
-          <DescriptionText>
-            Set up your project, define scope, <br /> services, timelines,{" "}
-            <br />
-            and collaboration rules. <br /> Prepare a clean <br />
-            and structured outsourcing environment.
-          </DescriptionText>
+          <div>
+            <Title className="text-xl lg:text-left">Create Your Project</Title>
+            <DescriptionText className="lg:text-left ">
+              Set up your project, define scope, services, timelines, <br />
+              and collaboration rules. Prepare a clean <br />
+              and structured outsourcing environment.
+            </DescriptionText>
+          </div>
         </Feature>
       </SlideUpScrollAnimation>
     </Features>

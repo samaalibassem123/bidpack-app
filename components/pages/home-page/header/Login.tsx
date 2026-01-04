@@ -10,6 +10,7 @@ export default function Login({ className }: Props) {
   return (
     <Link
       href={LOGIN_URL}
+      target="_blank"
       className={cn("hover:opacity-80 transition-all font-semibold", className)}
     >
       Login

@@ -5,6 +5,7 @@ export default function Register() {
   return (
     <Link
       href={REGISTER_URL}
+      target="_blank"
       className="px-[16px] py-[8px] rounded-[8px] bg-[#5473C1] hover:opacity-80  transition-all font-semibold"
     >
       Sign Up

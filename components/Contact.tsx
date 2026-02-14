@@ -9,10 +9,18 @@ import {
 } from "@/components/ui/drawer";
 
 import Copyright from "./ui/Copyright";
+import Link from "next/link";
 
 export default function Contact() {
   return (
-    <Drawer>
+    <Link href={"/contact"} className=" hover:underline cursor-pointer">
+      Contact
+    </Link>
+  );
+
+  {
+    /**
+       *  <Drawer>
       <DrawerTrigger className=" hover:underline  cursor-pointer">
         Contact Information
       </DrawerTrigger>
@@ -39,5 +47,6 @@ export default function Contact() {
         </div>
       </DrawerContent>
     </Drawer>
-  );
+       */
+  }
 }

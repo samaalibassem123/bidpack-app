@@ -43,7 +43,7 @@ export default function ContactPage() {
       });
 
       if (response.ok) {
-        toast("Message sent!", {
+        toast.success("Message sent!", {
           description: "We will get back to you as soon as possible.",
         });
 

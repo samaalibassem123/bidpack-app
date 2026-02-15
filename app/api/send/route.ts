@@ -1,7 +1,8 @@
-export const runtime = "nodejs";
-
-import nodemailer from "nodemailer";
+import { EmailTemplate } from "@/components/EmailTemplate";
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
@@ -14,31 +15,18 @@ export async function POST(req: Request) {
       );
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST!,
-      port: Number(process.env.SMTP_PORT!),
-      secure: Number(process.env.SMTP_PORT) === 465,
-      auth: {
-        user: process.env.SMTP_USER!,
-        pass: process.env.SMTP_PASS!,
-      },
+    const { data, error } = await resend.emails.send({
+      from: "Acme <onboarding@resend.dev>",
+      to: [subject], // the subject is the mail that is send to
+      subject: "Hello world",
+      react: EmailTemplate({
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        subject: subject,
+        message: message,
+      }),
     });
-
-    await transporter.sendMail({
-      from: `"Website Contact" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_RECEIVER!, // company email
-      subject: `Contact Form - ${subject}`,
-      html: `
-        <h2>Nouveau message</h2>
-        <p><strong>Name : </strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>subject:</strong> ${subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `,
-      replyTo: email,
-    });
-
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Email error:", error);

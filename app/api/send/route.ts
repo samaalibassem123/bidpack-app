@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: "Bidpack contact <onboarding@resend.dev>",
       to: [subject], // the subject is the mail that is send to
       subject: "Hello world",
       react: EmailTemplate({

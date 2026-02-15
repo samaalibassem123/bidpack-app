@@ -25,7 +25,8 @@ export function EmailTemplate({
         <strong>Email:</strong> {email}
       </p>
       <p>
-        <strong>subject:</strong> {subject}
+        <strong>subject:</strong>{" "}
+        {subject === "support@bidpack.co" ? "Technical Support" : "General"}
       </p>
       <p>
         <strong>Message:</strong>
